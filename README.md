@@ -33,4 +33,4 @@ Current progress:
 ## How to Run (Developers)
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/weatheraf.git
+   git clone https://github.com/clyde6205/weatheraf.git
