@@ -1,40 +1,67 @@
 # Node modules
 node_modules/
 
-# React Native
+# React Native generated folders
 android/
 ios/
+__generated__/
+
+# Build outputs
 build/
 *.apk
 *.aar
 *.jar
+*.ipa
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Cache
-.metro
-.buckd
+# Metro bundler
+.metro/
+
+# Watchman
 .watchmanconfig
 
 # macOS
 .DS_Store
+*.swp
 
 # Android
-.gradle
+.gradle/
 local.properties
 *.iml
+.coverage
 
-# Expo / other
+# iOS
+*.xcworkspace
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata
+Pods/
+Podfile.lock
+
+# Expo / cache
 .expo/
 .expo-shared/
 
 # Misc
 .env
+.env.local
+.env.development
+.env.production
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
+*.orig
+*.rej
+
+# Jest
+coverage/
+
+# Temporary files
+*.tmp
+*.bak
