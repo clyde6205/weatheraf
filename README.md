@@ -1,36 +1,25 @@
-# Afweather – Weather for Rural African Farmers
+# weatheraf
 
-**Afweather** is a lightweight, offline-first mobile app built specifically for rural farmers across all of Africa.
+Offline-first mobile app for rural Africa farmers.
 
-This app works on low-end Android phones, uses very little data, and functions fully offline after the first sync.
+Built with React Native + Expo for low-end Android phones (Android 6+).
 
-## Key Features
-- **GPS-based location**: Automatically detects your exact farm location (no need for city or address names)
-- **Real hyper-local weather**: Current conditions + 7-day forecast for any rural area in Africa (powered by Open-Meteo – free, accurate, no API key)
-- **Full offline support**: Once weather is loaded, it stays saved – works with no signal or data
-- **Crop recommendations**: Best crops and planting advice based on your country and current weather
-- **Simple & farmer-friendly**: Big text, easy buttons, low battery and data usage
-- **No internet required after first use**: Perfect for remote areas with only occasional cell tower access
+**Key Features:**
+- 100% offline — works with no SIM data or signal
+- Uses only mobile data from rural towers (no Wi-Fi ever)
+- Local database (expo-sqlite) for all data
+- Fully editable notes, weather, crop info offline
+- Auto-syncs weather when SIM data available (Open-Meteo API — free, no key)
+- Coarse location for farm position (low battery)
+- Minimal UI — fast on 1GB RAM phones
+- Common African crops advice (maize, sorghum, cassava, etc.) — coming next
 
-## Target Users
-- Rural farmers in all 54 African countries
-- Users with cheap/low-end Android phones (Android 6.0 and above)
-- Areas with weak or no WiFi – only SIM card mobile data when available
+**Target Users:**
+Rural farmers across Africa using cheap Android phones (Tecno, Itel, Infinix, etc.)
 
-## Tech Stack
-- **React Native** – True native Android app (lightweight, fast)
-- **Open-Meteo** – Free global weather API with excellent rural coverage
-- **AsyncStorage** – Local offline caching
-- No heavy libraries – keeps app size small (<30MB)
+**Status:**
+Active development — core offline screen working.
 
-## Current Status
-🚧 **In Development** – Building core features step by step  
-Current progress:
-- Basic app structure complete
-- Welcome screen ready
-- GPS, weather fetch, and offline caching coming next
-
-## How to Run (Developers)
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/clyde6205/weatheraf.git
+**Run it:**
+```bash
+npx expo start
