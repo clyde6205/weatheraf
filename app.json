@@ -1,37 +1,30 @@
 {
-  "name": "Afweather",
-  "displayName": "Afweather",
-  "version": "1.0.0",
-  "slug": "afweather",
-  "orientation": "portrait",
-  "icon": "./assets/icon.png",
-  "userInterfaceStyle": "light",
-  "splash": {
-    "image": "./assets/splash.png",
-    "resizeMode": "contain",
-    "backgroundColor": "#1e3d59"
-  },
-  "assetBundlePatterns": [
-    "**/*"
-  ],
-  "ios": {
-    "supportsTablet": true
-  },
-  "android": {
-    "adaptiveIcon": {
-      "foregroundImage": "./assets/adaptive-icon.png",
-      "backgroundColor": "#1e3d59"
+  "expo": {
+    "name": "weatheraf",
+    "slug": "weatheraf",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
-    "package": "com.afweather.app",
-    "permissions": [
-      "ACCESS_FINE_LOCATION",
-      "ACCESS_COARSE_LOCATION",
-      "INTERNET",
-      "ACCESS_NETWORK_STATE"
-    ]
-  },
-  "web": {
-    "favicon": "./assets/favicon.png"
-  },
-  "description": "Offline weather & crop advice for rural African farmers"
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.yourname.weatheraf"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
 }
+
