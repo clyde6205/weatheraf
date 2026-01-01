@@ -53,12 +53,23 @@ export default function App() {
     lastSynced: null,
   });
   const [isOnline, setIsOnline] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);  // NEW: Track DB loading
 
   useEffect(() => {
-    openDatabase();
-    checkNetwork();
-    loadLocation();
-    loadTodayData();
+    const initApp = async () => {
+      try {
+        await openDatabase();  // Wait for DB
+        await checkNetwork();
+        await loadLocation();
+        await loadTodayData();
+        setIsLoading(false);  // Done loading
+      } catch (e) {
+        console.log('Init error', e);
+        setIsLoading(false);
+      }
+    };
+
+    initApp();
 
     const unsubscribe = NetInfo.addEventListener(state => {
       const online = state.isConnected && state.isInternetReachable;
@@ -154,6 +165,14 @@ export default function App() {
       console.log('Sync normal (offline)');
     }
   };
+
+  if (isLoading) {
+    return (
+      <View style={styles.container}>
+        <Text>Loading weatheraf...</Text>
+      </View>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.container}>
